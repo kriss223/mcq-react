@@ -133,7 +133,7 @@ const Question = () => {
           minHeight: "20px",
           backgroundColor: 'yellow'
         }}
-          percent={(score + countmistake)/ ques.length * 100}
+          percent={score? ((score + countmistake)/ ques.length * 100): 0}
           strokeLinecap="square"/>
 
         </div>
