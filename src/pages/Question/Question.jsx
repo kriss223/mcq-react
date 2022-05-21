@@ -6,7 +6,7 @@ import { decode } from 'url-encode-decode'
 import { Line } from "rc-progress"
 import Rating from '../../components/Rating'
 import ques from "../../data/questions.json"
-import { increment, changeName } from '../../redux/reducer'
+import { increment, changeName, resetScore } from '../../redux/reducer'
 
 import './Question.scss'
 
@@ -72,6 +72,7 @@ const Question = () => {
   };
 
   const nextQuestion = () => {
+    if (questionIndex + 1 < ques.length) dispatch(resetScore(0));
     setQuestionIndex(questionIndex + 1)
     setshow(false)
     setrepeat(true)
@@ -84,7 +85,7 @@ const Question = () => {
 
       <div className="question__container">
         
-        <Line percent={ questionIndex/ques.length * 100} trailWidth={2} strokeWidth={2}/>
+        <Line percent={ (questionIndex + 1)/ques.length * 100} trailWidth={2} strokeWidth={2}/>
 
         <div className="content">
 
