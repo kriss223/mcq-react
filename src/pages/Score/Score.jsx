@@ -1,7 +1,8 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { Line } from "rc-progress"
+import { resetScore } from '../../redux/reducer'
 
 import "./Score.scss";
 
@@ -9,9 +10,11 @@ const Score = () => {
   const navigate = useNavigate();
   const score = useSelector(state => state.score.score);
   const name = useSelector(state => state.score.userName);
+  const dispatch = useDispatch();
 
 
   const changePage = () => {
+    dispatch(resetScore(0))
     navigate('/question')
   }
   return (

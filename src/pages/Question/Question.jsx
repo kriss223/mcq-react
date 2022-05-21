@@ -6,7 +6,7 @@ import { decode } from 'url-encode-decode'
 import { Line } from "rc-progress"
 import Rating from '../../components/Rating'
 import ques from "../../data/questions.json"
-import { increment, changeName, resetScore } from '../../redux/reducer'
+import { increment, changeName } from '../../redux/reducer'
 
 import './Question.scss'
 
@@ -72,9 +72,6 @@ const Question = () => {
   };
 
   const nextQuestion = () => {
-    if (!(questionIndex + 1 < ques.length)) {
-      dispatch(resetScore(0));
-    }
     setQuestionIndex(questionIndex + 1)
     setshow(false)
     setrepeat(true)
