@@ -1,0 +1,24 @@
+.login {
+    min-height: 100vh;
+
+    .login__container form {
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+    }
+
+    .inputname {
+        padding: 0.2em;
+        min-height: 2.5em;
+        min-width: 20em;
+    }
+
+
+    .btn {
+        color: black;
+    }
+
+}

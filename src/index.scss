@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: rgb(195, 230, 241);
+    font-family: sans-serif;
+}
+
+.btn {
+    padding: 1em 2em;
+    text-transform: capitalize;
+    background: white;
+    border: 1px solid gray;
+    color: black;
+
+    &:active {
+        background: gray;
+    }
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
