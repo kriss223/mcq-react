@@ -72,7 +72,9 @@ const Question = () => {
   };
 
   const nextQuestion = () => {
-    if (questionIndex + 1 < ques.length) dispatch(resetScore(0));
+    if (!(questionIndex + 1 < ques.length)) {
+      dispatch(resetScore(0));
+    }
     setQuestionIndex(questionIndex + 1)
     setshow(false)
     setrepeat(true)
