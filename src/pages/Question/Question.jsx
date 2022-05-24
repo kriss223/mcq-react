@@ -123,7 +123,7 @@ const Question = () => {
         </div>
         
         <div className="question__score">
-          <h4>Score: {score / 20 * 100 + '%'}</h4>
+          <h4>Score: {Math.floor(score / 20 * 100) + '%'}</h4>
           <h4>maxScore: {Math.floor((20 - countmistake) / 20 * 100) + '%'}</h4>
         </div>
 
